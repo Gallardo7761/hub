@@ -14,7 +14,7 @@ export const CARDS = [
     {
         image: "images/miarmacraft.png",
         title: "Miarmacraft",
-        description: "Nuestro servidor de Minecraft con plugins (1.21.1).",
+        description: "Nuestro servidor de Minecraft con mods (1.18.2 - F40.3.3).",
         link: "https://miarma.net/miarmacraft"
     },
     {
@@ -32,7 +32,7 @@ export const CARDS = [
     {
         image: "images/status.png",
         title: "Estado del servidor",
-        description: "Cliente Glances para ver las temperaturas y uso del servidor. (Acceso restringido)",
+        description: "Cliente para ver las temperaturas y uso del servidor. (Acceso restringido)",
         link: "http://status.miarma.net/"
     },
     {
