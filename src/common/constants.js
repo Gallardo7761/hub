@@ -40,5 +40,11 @@ export const CARDS = [
         title: "Portafolio del admin",
         description: "Web personal de Gallardo7761 (a.k.a Jose). PD: Es muy simple lo sé XD",
         link: "http://miarma.net/gallardo7761"
+    },
+    {
+        image: "images/contaminus.png",
+        title: "ContaminUS",
+        description: "Proyecto para el Hack4Change de la ETSII US. (En desarrollo)",
+        link: "http://contaminus.miarma.net"
     }
 ];
