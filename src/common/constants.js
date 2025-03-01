@@ -24,18 +24,6 @@ export const CARDS = [
         link: "https://miarma.net/calvaria"
     },
     {
-        image: "images/p2p.png",
-        title: "Cliente P2P",
-        description: "Sitio para manejar descargas desde el servidor. (Acceso restringido)",
-        link: "http://192.168.1.200:8888/"
-    },
-    {
-        image: "images/status.png",
-        title: "Estado del servidor",
-        description: "Cliente para ver las temperaturas y uso del servidor. (Acceso restringido)",
-        link: "http://status.miarma.net/"
-    },
-    {
         image: "images/gallardo.png",
         title: "Portafolio del admin",
         description: "Web personal de Gallardo7761 (a.k.a Jose). PD: Es muy simple lo sé XD",
