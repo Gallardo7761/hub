@@ -31,8 +31,8 @@ function App() {
 
     return (
         <>
+        <Header />
         <ContentWrapper>
-            <Header />
             <div className={"row g-4"}>
                 {config.map((card, index) => (
                     <Card key={index} {...card} />
