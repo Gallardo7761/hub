@@ -1,6 +1,5 @@
 import { useConfig } from "../contexts/ConfigContext.jsx";
 import Card from "./Card.jsx";
-import ThemeButton from "./ThemeButton.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -92,7 +91,6 @@ function App() {
                 </div>
             </ContentWrapper>
             <Footer />
-            <ThemeButton />
         </>
     );
 }

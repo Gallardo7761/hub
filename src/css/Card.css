@@ -1,14 +1,14 @@
 .card {
-  border: none;
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
-  color: var(--text);
-  z-index: 1;
+    border: none;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    color: var(--text);
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .card:hover {
     transform: translateY(-10px);
@@ -41,4 +41,3 @@
 .btn-primary:hover {
     background-color: var(--accent-hover);
 }
-
