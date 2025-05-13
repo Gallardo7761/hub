@@ -1,17 +1,90 @@
-body {
-    background-color: #f8f9fa;
-    font-family: 'Roboto', sans-serif;
-    transition: background-color 0.3s, color 0.3s;
+/* ================================
+   FUENTES PERSONALIZADAS
+================================== */
+@font-face {
+  font-family: "Open Sans";
+  src: url('/fonts/OpenSans.ttf');
 }
 
-.dark-mode {
-    background-color: #212529;
-    color: #f8f9fa;
+@font-face {
+  font-family: "Product Sans";
+  src: url('/fonts/ProductSansRegular.ttf');
+}
+
+@font-face {
+  font-family: "Product Sans Italic";
+  src: url('/fonts/ProductSansItalic.ttf');
+}
+
+@font-face {
+  font-family: "Product Sans Italic Bold";
+  src: url('/fonts/ProductSansBoldItalic.ttf');
+}
+
+@font-face {
+  font-family: "Product Sans Bold";
+  src: url('/fonts/ProductSansBold.ttf');
+}
+
+:root {
+    --accent: #ad1a36;
+    --accent-hover: #89152a;
+}
+
+.light {
+    --primary: #f8f9fa;
+    --secondary: #ffffff;
+    --muted: #6c757d;
+    --text: #212529;
+    --bg: #ffffff;
+}
+
+.dark {
+    --primary: #343a40;
+    --secondary: #212529;
+    --muted: #adb5bd;
+    --text: #f8f9fa;
+    --bg: #212529;
+}
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+/* Tipografía global */
+div,
+label,
+input,
+p,
+span,
+a,
+button {
+  font-family: "Open Sans", sans-serif;
+  color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Product Sans", sans-serif;
+  color: var(--text);
+}
+
+
+main {
+  color: var(--text);
+  background-color: var(--bg);
 }
 
 .theme-toggle {
     position: fixed;
-    bottom: 20px;
+    bottom: 20px;   
     right: 20px;
     z-index: 1000;
     border: none;
@@ -21,33 +94,26 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #228855;
+    background-color: var(--accent);
     color: white;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.3s;
 }
 
 a {
-    color: #228855;
-    transition: color 0.3s;
+    color: var(--accent);
 }
 
 a:hover {
-    color: #006633;
+    color: var(--accent-hover);
 }
 
 .theme-toggle:hover {
-    background-color: #006633;
-    transform: scale(1.1);
+    background-color: var(--accent-hover);
 }
 
 footer {
     margin-top: 30px;
     text-align: center;
-    color: #6c757d;
-}
-
-.dark-mode footer {
-    color: #adb5bd;
+    color: var(--muted);
 }

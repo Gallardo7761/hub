@@ -1,13 +1,8 @@
 .card {
     border: none;
+    background-color: var(--primary);
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-    background-color: #ffffff;
-}
-
-.dark-mode .card {
-    background-color: #343a40;
 }
 
 .card:hover {
@@ -23,26 +18,21 @@
     font-weight: bold;
 }
 
-.dark-mode .card-title {
-    color: #adb5bd;
+.card-title {
+    color: var(--text);
 }
 
 .card-text {
-    color: #6c757d;
-}
-
-.dark-mode .card-text {
-    color: #adb5bd;
+    color: var(--text);
 }
 
 .btn-primary {
-    background-color: #228855;
+    background-color: var(--accent);
     border: none;
     border-radius: 50px;
     padding: 10px 20px;
-    transition: background-color 0.3s;
 }
 
 .btn-primary:hover {
-    background-color: #006633;
+    background-color: var(--accent-hover);
 }

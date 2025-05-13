@@ -2,22 +2,22 @@ import {useEffect, useState} from 'react';
 
 export default function ThemeButton() {
     const [theme, setTheme] = useState(() => {
-        return localStorage.getItem("theme") || "light-mode";
+        return localStorage.getItem("theme") || "light";
     });
 
     useEffect(() => {
-        document.body.classList.remove("light-mode", "dark-mode");
+        document.body.classList.remove("light", "dark");
         document.body.classList.add(theme);
         localStorage.setItem("theme", theme);
     }, [theme]);
 
     const toggleTheme = () => {
-        setTheme((prevTheme) => (prevTheme === "light-mode" ? "dark-mode" : "light-mode"));
+        setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
     };
 
     return (
         <button className={"theme-toggle"} onClick={toggleTheme}>
-            {theme === "dark-mode" ? "☀️" : "🌙"}
+            {theme === "dark" ? "☀️" : "🌙"}
         </button>
     )
 }
