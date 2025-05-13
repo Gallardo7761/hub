@@ -1,8 +1,19 @@
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
+import { useState, useEffect } from "react";
 
-export default function Card({ image, title, description, link, onHoverStart, onHoverEnd }) {
+export default function Card({ title, description, link, onHoverStart, onHoverEnd }) {
+    const [image, setImage] = useState("");
+    
+    useEffect(() => {
+        const getImage = async () => {
+            const response = await fetch("https://api.miarma.net/v1/screenshot?url=" + link);
+            setImage(response.url);
+        }
+        getImage();
+    })
+
     return (
         <div className={"col-md-6 col-lg-3"}>
             <div className={"card"}>
@@ -27,7 +38,6 @@ export default function Card({ image, title, description, link, onHoverStart, on
 }
 
 Card.propTypes = {
-    image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
