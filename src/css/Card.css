@@ -1,17 +1,22 @@
 .card {
-    border: none;
-    background-color: var(--primary);
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+  color: var(--text);
+  z-index: 1;
 }
+
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 15px;
 }
 
 .card-title {
@@ -36,3 +41,4 @@
 .btn-primary:hover {
     background-color: var(--accent-hover);
 }
+
