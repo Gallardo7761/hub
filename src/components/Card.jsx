@@ -5,14 +5,16 @@ import { useState, useEffect } from "react";
 
 export default function Card({ title, description, link, onHoverStart, onHoverEnd }) {
     const [image, setImage] = useState("");
-    
+
     useEffect(() => {
         const getImage = async () => {
             const response = await fetch("https://api.miarma.net/v1/screenshot?url=" + link);
-            setImage(response.url);
+            const blob = await response.blob();
+            const imageURL = URL.createObjectURL(blob);
+            setImage(imageURL);
         }
         getImage();
-    })
+    }, [link]);
 
     return (
         <div className={"col-md-6 col-lg-3"}>
