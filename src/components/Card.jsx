@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 
-export default function Card({ title, description, link, onHoverStart, onHoverEnd }) {
+export default function Card({ title, description, link }) {
     const [image, setImage] = useState("");
 
     useEffect(() => {
@@ -26,8 +26,6 @@ export default function Card({ title, description, link, onHoverStart, onHoverEn
                     <a
                         href={link}
                         className={"btn btn-primary text-dark"}
-                        onMouseEnter={() => onHoverStart?.()}
-                        onMouseLeave={() => onHoverEnd?.()}
                     >
                         <FontAwesomeIcon icon={faArrowUpRightFromSquare} className={"me-2"} />
                         Ir
