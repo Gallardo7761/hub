@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Panel de administración",
+        "description": "Panel de control para los administradores de miarma.net",
+        "link": "https://panel.miarma.net/"
+    },
+    {
+        "title": "Jellyfin",
+        "description": "Servidor multimedia privado para ver videitos",
+        "link": "https://cine.miarma.net/"
+    },
+    {
+        "title": "Miarmacraft",
+        "description": "Nuestro server de MC Forge 1.20.1",
+        "link": "https://miarma.net/miarmacraft"
+    },
+    {
+        "title": "Calvaria",
+        "description": "Nuestro servidor de tModLoader 1.4.4.9",
+        "link": "https://miarma.net/calvaria"
+    },
+    {
+        "title": "Portafolio",
+        "description": "Mi portafolio personal (proyectos e info)",
+        "link": "http://gallardo.dev"
+    },
+    {
+        "title": "Huertos Bellavista",
+        "description": "Web de la comunidad de huertos urbanos de Bellavista",
+        "link": "https://www.huertosbellavista.es/"
+    },
+    {
+        "title": "ContaminUS",
+        "description": "Proyecto a presentar en el Hack4Change ETSII 2025",
+        "link": "https://contaminus.miarma.net/groups/1/devices/6a6098"
+    }
+]
