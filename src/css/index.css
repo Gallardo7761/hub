@@ -26,48 +26,23 @@
   src: url('/fonts/ProductSansBold.ttf');
 }
 
-* {
-  transition: background-color 0.4s, border-color 0.4s, color 0.4s;
-}
-
 :root {
-  --accent: linear-gradient(45deg,
-    #ff66ff,
-    #66ffff,
-    #ffff66,
-    #66ff66,
-    #ff6666
-  );
-  --accent-hover: linear-gradient(45deg,
-    #ff99ff,
-    #99ffff,
-    #ffff99,
-    #99ff99,
-    #ff9999
-  );
-}
-
-.light {
-    --primary: #bebebe;
-    --secondary: #ffffff;
-    --muted: #6c757d;
-    --text: #212529;
-    --bg: #ffffff;
-}
-
-.dark {
-    --primary: #343a40;
-    --secondary: #212529;
-    --muted: #adb5bd;
-    --text: #f8f9fa;
-    --bg: #212529;
+  --light: #f6f6f6;
+  --white: #ffffff;
+  --blue: #2F6CA3;
+  --blue-dark: #0A365E;
+  --orange: #e3bb9d;
+  --orange-dark: #c1763c;
+  --muted: #6c757d;
+  --text-dark: #212529;
+  --text-light: #ffffff;
 }
 
 html,
 body {
   font-family: "Open Sans", sans-serif;
-  color: var(--text);
-  background-color: var(--bg);
+  color: var(--text-dark);
+  background-color: var(--white);
 }
 
 /* Tipografía global */
@@ -79,7 +54,7 @@ span,
 a,
 button {
   font-family: "Open Sans", sans-serif;
-  color: var(--text);
+  color: var(--text-dark);
 }
 
 h1,
@@ -89,56 +64,25 @@ h4,
 h5,
 h6 {
   font-family: "Product Sans Bold", sans-serif;
-  color: var(--text);
+  color: var(--text-dark);
 }
 
 
 main {
-  color: var(--text);
-  background-color: var(--bg);
-}
-
-.theme-toggle {
-    position: fixed;
-    bottom: 20px;   
-    right: 20px;
-    z-index: 1000;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--accent);
-    color: white;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: var(--text-dark);
+  background-color: var(--white);
 }
 
 a {
-    color: var(--accent);
+    color: var(--blue);
 }
 
 a:hover {
-    color: var(--accent-hover);
-}
-
-.theme-toggle:hover {
-    background-color: var(--accent-hover);
+    color: var(--blue-dark);
 }
 
 footer {
     margin-top: 30px;
     text-align: center;
     color: var(--muted);
-}
-
-.gradient-text {
-    background: var(--accent);
-    background-size: 300% 300%; 
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: holografico 4s ease infinite;
 }

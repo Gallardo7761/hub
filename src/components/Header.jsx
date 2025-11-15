@@ -1,8 +1,8 @@
 const Header = () => {
     return (
-        <h1 className={"text-center my-5 fw-bold"}>
-            <a href="https://miarma.net/" className="gradient-text">miarma.net</a> hub
-        </h1>
+        <div className="d-flex justify-content-center my-3">
+            <img src="/images/logo-with-text.svg" width={192} height={192} />
+        </div>
     );
 }
 

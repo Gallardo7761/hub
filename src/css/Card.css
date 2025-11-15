@@ -1,52 +1,32 @@
 .card {
-    border: none;
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
-    color: var(--text);
-    z-index: 1;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+    color: var(--text-dark);
+    background: var(--light);
 }
 
 .card img {
-    border-radius: 15px;
+    border-radius: 0px;
+    box-shadow: black ;
 }
 
 .card-title {
-    font-weight: 1500 !important;
-    color: var(--text);
+    color: var(--text-dark);
 }
 
 .card-text {
-    color: var(--text);
+    color: var(--text-dark);
 }
 
 .btn-primary {
-    background: var(--accent);
-    background-size: 300% 300%; /* Para la animación */
-    border: none;
-    border-radius: 50px;
+    background: var(--orange-dark);
+    border-radius: 0px;
     padding: 10px 20px;
-    color: #000;
+    color: var(--text-dark);
     font-weight: bold;
-    transition: background-position 0.3s ease;
-    animation: holografico 3s ease infinite;
+    border: none;
 }
 
 .btn-primary:hover {
-    background: var(--accent-hover);
-    background-size: 300% 300%;
-}
-
-@keyframes holografico {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    background: var(--blue);
+    color: var(--text-light)
 }

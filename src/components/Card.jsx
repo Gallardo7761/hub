@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 
-export default function Card({ title, description, link }) {
+export default function Card({ title, link }) {
     const [image, setImage] = useState("");
 
     useEffect(() => {
@@ -22,10 +22,9 @@ export default function Card({ title, description, link }) {
                 <div className={"card-body text-center"}>
                     <img src={image} className={"card-img-top mb-3"}></img>
                     <h5 className={"card-title"}>{title}</h5>
-                    <p className={"card-text"}>{description}</p>
                     <a
                         href={link}
-                        className={"btn btn-primary text-dark"}
+                        className={"btn btn-primary"}
                     >
                         <FontAwesomeIcon icon={faArrowUpRightFromSquare} className={"me-2"} />
                         Ir
