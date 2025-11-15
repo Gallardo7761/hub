@@ -6,7 +6,6 @@
 
 .card img {
     border-radius: 0px;
-    box-shadow: black ;
 }
 
 .card-title {
@@ -18,15 +17,15 @@
 }
 
 .btn-primary {
-    background: var(--orange-dark);
+    background: #1e1e1e;
     border-radius: 0px;
     padding: 10px 20px;
-    color: var(--text-dark);
+    color: var(--text-light);
     font-weight: bold;
     border: none;
 }
 
 .btn-primary:hover {
-    background: var(--blue);
+    background: #3e3e3e;
     color: var(--text-light)
 }

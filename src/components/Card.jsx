@@ -20,7 +20,7 @@ export default function Card({ title, link }) {
         <div className={"col-md-6 col-lg-3"}>
             <div className={"card"}>
                 <div className={"card-body text-center"}>
-                    <img src={image} className={"card-img-top mb-3"}></img>
+                    <img src={image} className={"card-img-top mb-2 border"}></img>
                     <h5 className={"card-title"}>{title}</h5>
                     <a
                         href={link}
