@@ -6,7 +6,7 @@ const License = ({ work, workLink }) => {
   return (
     <>
       <a href={workLink} target="_blank" rel="noopener noreferrer">{work}</a> © {currentYear} by{' '}
-      <a href="https://gallardo.dev" target="_blank" rel="noopener noreferrer">Gallardo7761 (Jose)</a> is licensed under{' '}
+      <a href="https://jose.miarma.net" target="_blank" rel="noopener noreferrer">Gallardo7761 (Jose)</a> is licensed under{' '}
       <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">
         CC BY-NC-ND 4.0
       </a>

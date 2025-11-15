@@ -19,17 +19,17 @@ export default function Card({ title, link }) {
     return (
         <div className={"col-md-6 col-lg-3"}>
             <div className={"card"}>
-                <div className={"card-body text-center"}>
-                    <img src={image} className={"card-img-top mb-2 border"}></img>
-                    <h5 className={"card-title"}>{title}</h5>
-                    <a
-                        href={link}
-                        className={"btn btn-primary"}
-                    >
+                <div className="card-header text-center bg-light">
+                    <h5 className={"card-title m-0"}>{title}</h5>
+                </div>
+                <div className={"card-body p-0 text-center"}>
+                    <img src={image} className={"card-img-top"} alt={title}></img>
+                </div>
+                <div className="card-footer p-0">
+                    <a href={link} className={"btn btn-primary w-100"}>
                         <FontAwesomeIcon icon={faArrowUpRightFromSquare} className={"me-2"} />
-                        Ir
+                        Link
                     </a>
-
                 </div>
             </div>
         </div>
