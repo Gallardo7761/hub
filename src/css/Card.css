@@ -24,6 +24,7 @@
     padding: 10px 20px;
     color: var(--text-light);
     font-weight: bold;
+    font-size: large;
     border: none;
     z-index: 1;
 }

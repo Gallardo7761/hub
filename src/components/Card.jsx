@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 
 export default function Card({ title, link }) {
     const [image, setImage] = useState("");
+    const [buttonContent, setButtonContent] = useState(<>{title}</>);
 
     useEffect(() => {
         const getImage = async () => {
@@ -18,28 +19,37 @@ export default function Card({ title, link }) {
 
     return (
         <div className={"col-md-6 col-lg-3"}>
-            <div className={"card"}>
-                <div className="card-header text-center bg-light">
-                    <h5 className={"card-title m-0"}>{title}</h5>
-                </div>
+
+            <div className={"card shadow-sm"}>
                 <div className={"card-body p-0 text-center"}>
                     <img src={image} className={"card-img-top"} alt={title}></img>
                 </div>
-                <div className="card-footer p-0">
-                    <a href={link} className={"btn btn-primary w-100"}>
-                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} className={"me-2"} />
-                        Link
-                    </a>
+
+                <div className="card-footer border-0 p-0">
+                    <div className="btn btn-primary w-100"
+                        onClick={() => window.open(link, "_blank")}
+                        onMouseEnter={() => setButtonContent(
+                            <>
+                                <FontAwesomeIcon icon={faArrowUpRightFromSquare} className={"me-2"} />
+                                Link
+                            </>
+                        )} 
+                        onMouseLeave={() => setButtonContent(
+                            <>
+                                {title}
+                            </>
+                        )}
+                    >
+                        {buttonContent}
+                    </div>
                 </div>
             </div>
+
         </div>
     )
 }
 
 Card.propTypes = {
     title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    onHoverStart: PropTypes.func,
-    onHoverEnd: PropTypes.func,
+    link: PropTypes.string.isRequired
 }
