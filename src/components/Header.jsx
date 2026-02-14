@@ -63,8 +63,8 @@ const Header = () => {
 
                 <IfNotAuthenticated>
                     {!location.pathname.includes("login") && (
-                        <Link to="/login">
-                            <Button variant="primary" size="sm" className="rounded-0 px-3 py-1 d-flex align-items-center">
+                        <Link to="/login" className="text-decoration-none">
+                            <Button variant="primary" size="sm" className="rounded-0 px-3 py-1 d-flex align-items-center login-register-btn">
                                 <FontAwesomeIcon icon={faSignIn} className="me-2" />
                                 <span className="d-none d-md-inline">Iniciar sesión</span>
                             </Button>
@@ -72,8 +72,8 @@ const Header = () => {
                     )}
 
                     {!location.pathname.includes("register") && (
-                        <Link to="/register">
-                            <Button variant="primary" size="sm" className="rounded-0 px-3 py-1 d-flex align-items-center">
+                        <Link to="/register"  className="text-decoration-none">
+                            <Button variant="primary" size="sm" className="rounded-0 px-3 py-1 d-flex align-items-center login-register-btn">
                                 <FontAwesomeIcon icon={faUserPlus} className="me-2" />
                                 <span className="d-none d-md-inline">Registrarse</span>
                             </Button>
