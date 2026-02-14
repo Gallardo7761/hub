@@ -1,0 +1,32 @@
+/* ================================
+   LOGIN - CARD CONTAINER (VISUAL)
+================================== */
+
+.login-card {
+  background-color: var(--login-bg) !important;
+  color: var(--text-color); 
+}
+
+/* ================================
+     INPUTS VISUALES
+  ================================== */
+
+input.form-control {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
+}
+
+/* ================================
+     LABELS PERSONALIZADAS
+  ================================== */
+
+.form-floating>label {
+  font-family: 'Product Sans';
+  font-size: 1.1em;
+  color: var(--label-color);
+}
+
+.form-floating>label::after {
+  background-color: transparent !important;
+}

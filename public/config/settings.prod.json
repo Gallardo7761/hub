@@ -1,0 +1,66 @@
+{
+    "apiConfig": {
+        "baseUrl": "https://api.miarma.net/v2/core",
+        "endpoints": {
+            "auth": {
+                "login": "/auth/login",
+                "register": "/auth/register",
+                "refreshToken": "/auth/refresh",
+                "changePassword": "/auth/change-password",
+                "validateToken": "/auth/validate"
+            },
+            "users": {
+                "all": "/users",
+                "byId": "/users/:userId",
+                "avatar": "/users/:userId/avatar",
+                "status": "/users/:userId/status",
+                "role": "/users/:userId/role",
+                "exists": "/users/:userId/exists",
+                "me": "/users/me"
+            },
+            "credentials": {
+                "all": "/credentials",
+                "byId": "/credentials/:credentialId",
+                "byUserId": "/credentials/user/:userId"
+            }
+        }
+    },
+    "pages": [
+        {
+            "title": "Portafolio",
+            "link": "https://jose.miarma.net"
+        },
+        {
+            "title": "MiarmaGit",
+            "link": "https://git.miarma.net"
+        },
+        {
+            "title": "MiarmaPaste",
+            "link": "https://paste.miarma.net"
+        },
+        {
+            "title": "MiarmaCraft",
+            "link": "https://mc.miarma.net"
+        },
+        {
+            "title": "MiarmaDrive",
+            "link": "https://drive.miarma.net"
+        },
+        {
+            "title": "Multimedia",
+            "link": "https://cine.miarma.net"
+        },
+        {
+            "title": "Docs",
+            "link": "https://docs.miarma.net"
+        },
+        {
+            "title": "Huertos Bellavista",
+            "link": "https://www.huertosbellavista.es"
+        },
+        {
+            "title": "Huertos de Cine",
+            "link": "https://cine.huertosbellavista.es"
+        }
+    ]
+}

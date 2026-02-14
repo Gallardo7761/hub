@@ -1,4 +1,4 @@
-import License from './License';
+import License from '@/components/License';
 
 const Footer = () => {
   return (
