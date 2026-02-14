@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }) => {
       return;
     }
 
-    const BASE_URL = config.apiConfig.coreUrl;
+    const BASE_URL = config.apiConfig.baseUrl;
     const VALIDATE_URL = `${BASE_URL}${config.apiConfig.endpoints.auth.validateToken}`;
 
     const checkAuth = async () => {
