@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { Form, Button, Alert, FloatingLabel} from 'react-bootstrap';
+import { faAt, faIdCard, faUser } from '@fortawesome/free-solid-svg-icons';
+import { Form, Button, Alert, FloatingLabel } from 'react-bootstrap';
 import PasswordInput from './PasswordInput.jsx';
 
 import { useContext, useState } from "react";
@@ -13,28 +13,38 @@ import ContentWrapper from '@/components/ContentWrapper.jsx';
 import '@/css/LoginForm.css';
 
 const RegisterForm = () => {
-    const { register, error } = useContext(AuthContext);
+    const { register, error, clearError } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const [formState, setFormState] = useState({
+        displayName: "",
         username: "",
+        email: "",
         password: ""
     });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormState((prev) => ({ ...prev, [name]: value }));
+
+        setFormState((prev) => ({
+            ...prev,
+            [name]: name === "displayName" ? value.toUpperCase() : value
+        }));
+
+        if (error) clearError();
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-    
+
         const registerBody = {
+            displayName: formState.displayName ? formState.displayName.toUpperCase() : "",
             username: formState.username,
+            email: formState.email,
             password: formState.password,
             serviceId: 0
         };
-    
+
         try {
             await register(registerBody);
             navigate("/");
@@ -51,6 +61,26 @@ const RegisterForm = () => {
                     <Form className="d-flex flex-column gap-5" onSubmit={handleSubmit}>
                         <div className="d-flex flex-column gap-3">
                             <FloatingLabel
+                                controlId="floatingDisplayName"
+                                label={
+                                    <>
+                                        <FontAwesomeIcon icon={faIdCard} className="me-2" />
+                                        Nombre (será el usuario si se deja vacío)
+                                    </>
+                                }
+                            >
+                                <Form.Control
+                                    type="text"
+                                    placeholder=""
+                                    name="displayName"
+                                    value={formState.displayName}
+                                    onChange={handleChange}
+                                    required
+                                    className="themed-input rounded-0"
+                                />
+                            </FloatingLabel>
+
+                            <FloatingLabel
                                 controlId="floatingUsuario"
                                 label={
                                     <>
@@ -64,6 +94,25 @@ const RegisterForm = () => {
                                     placeholder=""
                                     name="username"
                                     value={formState.username}
+                                    onChange={handleChange}
+                                    className="themed-input rounded-0"
+                                />
+                            </FloatingLabel>
+
+                            <FloatingLabel
+                                controlId="floatingEmail"
+                                label={
+                                    <>
+                                        <FontAwesomeIcon icon={faAt} className="me-2" />
+                                        Email
+                                    </>
+                                }
+                            >
+                                <Form.Control
+                                    type="email"
+                                    placeholder=""
+                                    name="email"
+                                    value={formState.email}
                                     onChange={handleChange}
                                     className="themed-input rounded-0"
                                 />

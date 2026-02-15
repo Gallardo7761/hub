@@ -12,6 +12,7 @@ import AccountCard from "@/components/Accounts/AccountCard";
 import CustomModal from "@/components/CustomModal";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
 
 const Accounts = () => {
     const { config, configLoading } = useConfig();
@@ -41,6 +42,7 @@ const Accounts = () => {
 
 const AccountsContent = ({ reqConfig }) => {
     const { data, dataLoading, putData } = useDataContext();
+    const { logout } = useAuth();
     const [showConfirmModal, setShowConfirmModal] = useState(false);
     const [pendingAccountId, setPendingAccountId] = useState(null);
     const [pendingStatus, setPendingStatus] = useState(null);
@@ -76,6 +78,10 @@ const AccountsContent = ({ reqConfig }) => {
                 },
                 true
             );
+            
+            if(updatedIdentity?.status == 0) {
+                logout();
+            }
         } catch (err) {
             console.error(err);
         }
@@ -87,7 +93,7 @@ const AccountsContent = ({ reqConfig }) => {
         <CustomContainer>
             <ContentWrapper>
                 <PaginatedCardGrid
-                    items={data}
+                    items={data == null ? [] : data}
                     renderCard={(identity, idx) => (
                         <AccountCard
                             key={idx}

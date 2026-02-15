@@ -16,7 +16,7 @@ import '@/css/LoginForm.css';
 const LoginForm = () => {
     const PHRASES = ["U got the wrong house fool!", "¿Te conozco?", "Hola :3", "¿Quién chota sos?🧐", "Identifícate", "Arto ahí ¿quién ere?"];
 
-    const { login, error } = useContext(AuthContext);
+    const { login, error, clearError } = useContext(AuthContext);
     const [randomPhrase, setRandomPhrase] = useState("");
     const navigate = useNavigate();
 
@@ -33,6 +33,8 @@ const LoginForm = () => {
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormState((prev) => ({ ...prev, [name]: value }));
+
+        if (error) clearError();
     };
 
     const handleSubmit = async (e) => {

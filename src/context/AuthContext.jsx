@@ -150,6 +150,8 @@ export const AuthProvider = ({ children }) => {
     setAuthStatus("unauthenticated");
   };
 
+  const clearError = () => setError(null);
+
   return (
     <AuthContext.Provider
       value={{
@@ -160,6 +162,7 @@ export const AuthProvider = ({ children }) => {
         register,
         logout,
         error,
+        clearError
       }}
     >
       {children}
