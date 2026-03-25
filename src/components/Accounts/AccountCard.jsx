@@ -9,9 +9,8 @@ import { faPen, faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
 const getServiceName = (serviceId) => {
     switch (serviceId) {
         case CONSTANTS.CORE_ID: return "Miarma";
-        case CONSTANTS.HUERTOS_ID: return "Huertos Bellavista";
         case CONSTANTS.MINECRAFT_ID: return "MiarmaCraft";
-        case CONSTANTS.CINE_ID: return "Huertos de Cine";
+        case CONSTANTS.HUERTOS_DE_CINE_ID: return "Huertos de Cine";
         case CONSTANTS.MPASTE_ID: return "MPaste";
         default: return "Desconocido";
     }

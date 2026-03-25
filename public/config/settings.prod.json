@@ -47,20 +47,8 @@
             "link": "https://drive.miarma.net"
         },
         {
-            "title": "Multimedia",
+            "title": "MiarmaMedia",
             "link": "https://cine.miarma.net"
-        },
-        {
-            "title": "Docs",
-            "link": "https://docs.miarma.net"
-        },
-        {
-            "title": "Huertos Bellavista",
-            "link": "https://www.huertosbellavista.es"
-        },
-        {
-            "title": "Huertos de Cine",
-            "link": "https://cine.huertosbellavista.es"
         }
     ]
 }
