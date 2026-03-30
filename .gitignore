@@ -151,3 +151,5 @@ dist
 *.vsix
 
 package-lock.json
+
+/backend/target/
