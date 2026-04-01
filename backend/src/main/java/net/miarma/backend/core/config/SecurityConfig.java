@@ -55,7 +55,6 @@ public class SecurityConfig {
                 .requestMatchers("/auth/refresh").permitAll()
                 .requestMatchers("/auth/change-password").permitAll()
                 .requestMatchers("/auth/register").permitAll()
-                .requestMatchers("/test").permitAll()
                 .requestMatchers("/screenshot").permitAll()
                 .anyRequest().authenticated()
             );

@@ -111,4 +111,15 @@ public class AuthService {
 
         credentialService.updatePassword(cred.getCredentialId(), request);
     }
+
+    // admin
+    public void resetPassword(UUID userId, String password, Byte serviceId) {
+        Credential cred = credentialService.getByUserId(userId)
+                .stream()
+                .filter(c -> c.getServiceId().equals(serviceId))
+                .findFirst()
+                .orElseThrow(() -> new NotFoundException("Cuenta no encontrada"));
+
+        credentialService.resetPassword(cred.getCredentialId(), password);
+    }
 }

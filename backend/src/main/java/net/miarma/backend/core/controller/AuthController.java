@@ -5,8 +5,10 @@ import java.util.Map;
 import java.util.UUID;
 
 import net.miarma.backlib.dto.*;
+import net.miarma.backlib.security.PasswordGenerator;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -61,7 +63,7 @@ public class AuthController {
                 new ApiErrorDto(
                     401,
                     "Unauthorized",
-                    "Invalid token",
+                    "Token inválido",
                     "/v2/core/auth/change-password"
                 )
             );
@@ -101,7 +103,7 @@ public class AuthController {
                 new ApiErrorDto(
                     401,
                     "Unauthorized",
-                    "Invalid token",
+                    "Token inválido",
                     "/v2/core/auth/change-password"
                 )
             );
@@ -113,6 +115,27 @@ public class AuthController {
         return ResponseEntity.ok(Map.of("message", "Contraseña cambiada correctamente"));
     }
 
+    @PostMapping("/reset-password/{serviceId}/{userId}")
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<?> resetPassword(
+        @PathVariable("serviceId") Byte serviceId,
+        @PathVariable("userId") UUID userId
+    ) {
+        try {
+            String password = PasswordGenerator.generate(8);
+            authService.resetPassword(userId, password, serviceId);
+            return ResponseEntity.ok(Map.of("status", 200, "password", password));
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body(
+                new ApiErrorDto(
+                    500,
+                    "Internal Server Error",
+                    "No se ha podido resetear la contraseña",
+                    "/v2/core/auth/reset-password"
+                )
+            );
+        }
+    }
 
     @GetMapping("/validate")
     public ResponseEntity<Boolean> validate(@RequestHeader("Authorization") String authHeader) {

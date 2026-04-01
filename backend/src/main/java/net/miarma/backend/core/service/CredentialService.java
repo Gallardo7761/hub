@@ -6,6 +6,7 @@ import java.util.UUID;
 import jakarta.validation.constraints.NotBlank;
 import net.miarma.backlib.dto.ChangeStatusRequest;
 import net.miarma.backlib.exception.*;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -155,6 +156,16 @@ public class CredentialService {
         }
 
         cred.setPassword(passwordEncoder.encode(request.newPassword()));
+        return credentialRepository.save(cred);
+    }
+
+    // admin
+    public Credential resetPassword(UUID credentialId, String password) {
+        byte[] idBytes = UuidUtil.uuidToBin(credentialId);
+        Credential cred = credentialRepository.findById(idBytes)
+                .orElseThrow(() -> new NotFoundException("Cuenta no encontrada"));
+
+        cred.setPassword(passwordEncoder.encode(password));
         return credentialRepository.save(cred);
     }
 
