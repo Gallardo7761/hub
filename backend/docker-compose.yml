@@ -1,0 +1,35 @@
+services:
+  core:
+    image: eclipse-temurin:25-jdk
+    container_name: core
+    restart: unless-stopped
+
+    ports:
+      - "127.0.0.1:10000:10000"
+
+    networks:
+      - backend-dev-net
+
+    volumes:
+      - ./target:/data
+      - /home/jomaa/.config/backend/private.pem:/etc/backend/private.pem:ro
+      - /home/jomaa/.config/backend/public.pem:/etc/backend/public.pem:ro
+
+    working_dir: /data
+    command: ["java", "-jar", "core-1.0.0.jar"]
+
+    environment:
+      - SERVER_PORT=${CORE_PORT}
+      - SERVER_SERVLET_CONTEXT_PATH=${CORE_CONTEXT_PATH}
+      - SPRING_APPLICATION_NAME=${SPRING_APPLICATION_NAME_CORE}
+      - SPRING_DATASOURCE_URL=${SPRING_DATASOURCE_URL}
+      - SPRING_DATASOURCE_USERNAME=${SPRING_DATASOURCE_USERNAME}
+      - SPRING_DATASOURCE_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
+      - JWT_PRIVATE_KEY_PATH=${JWT_PRIVATE_KEY_PATH}
+      - JWT_PUBLIC_KEY_PATH=${JWT_PUBLIC_KEY_PATH}
+      - JWT_EXPIRATION_MS=${JWT_EXPIRATION_MS}
+      - SPRING_PROFILES_ACTIVE=dev
+
+networks:
+  backend-dev-net:
+    external: true
