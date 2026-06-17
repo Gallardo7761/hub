@@ -1,0 +1,20 @@
+{
+    "pages": [
+        {
+            "title": "Portafolio",
+            "link": "https://jose.miarma.net"
+        },
+        {
+            "title": "Huertos Bellavista",
+            "link": "https://www.huertosbellavista.es"
+        },
+        {
+            "title": "Huertos de Cine",
+            "link": "https://hdc.miarma.net"
+        },
+        {
+            "title": "MiarmaGit",
+            "link": "https://git.miarma.net"
+        }
+   ]
+}

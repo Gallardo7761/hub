@@ -1,9 +1,4 @@
 # frontend
-/frontend/package-lock.json
-/frontend/node_modules/
-/frontend/dist/
-
-# backend
-/backend/.idea/
-/backend/target/
-/backend/.env
+package-lock.json
+/node_modules/
+/dist/
