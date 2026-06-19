@@ -1,39 +1,30 @@
-import ContentWrapper from "@/components/ContentWrapper.jsx";
-import Card from "@/components/Card";
+import NetworkGraph from "@/components/graph/NetworkGraph";
 import { useConfig } from "@/hooks/useConfig";
 import LoadingIcon from "@/components/LoadingIcon";
-import PropTypes from 'prop-types';
 import CustomContainer from "@/components/CustomContainer";
+import "@/css/Home.css";
+
+const ROOT = { title: "miarma.net", link: "https://www.miarma.net" };
 
 const Home = () => {
     const { config, configLoading } = useConfig();
 
-    if (configLoading) return <p className="text-center my-5"><LoadingIcon /></p>;
+    if (configLoading) return <LoadingIcon />;
 
-    return (
-        <HomeContent cards={config.pages} />
-    );
-}
-
-const HomeContent = ({ cards }) => {
     return (
         <CustomContainer>
-            <ContentWrapper>
-                <div className={"row g-4"}>
-                    {cards.map((card, index) => (
-                        <Card
-                            key={index}
-                            {...card}
-                        />
-                    ))}
-                </div>
-            </ContentWrapper>
+            <header className="hero">
+                <p className="hero__tag">// personal network hub</p>
+                <h1 className="hero__title">
+                    miarma<span className="accent">.</span>net
+                    <span className="hero__beta">
+                        <span className="hero__beta-text">BETA</span>
+                    </span>
+                </h1>
+            </header>
+            <NetworkGraph root={ROOT} nodes={config.pages} />
         </CustomContainer>
     );
-}
-
-HomeContent.propTypes = {
-    cards: PropTypes.array.isRequired
 };
 
 export default Home;

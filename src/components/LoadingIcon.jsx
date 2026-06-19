@@ -1,9 +1,16 @@
-import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '@/css/LoadingIcon.css';
 
 const LoadingIcon = () => {
     return (
-        <FontAwesomeIcon icon={faSpinner} className='fa-spin fa-lg' />
+        <div className="boot-loader" role="status" aria-live="polite">
+            <span className="boot-loader__prompt">
+                $ booting network
+                <span className="boot-loader__dots">
+                    <span>.</span><span>.</span><span>.</span>
+                </span>
+            </span>
+            <span className="boot-loader__cursor" aria-hidden="true"></span>
+        </div>
     );
 }
 

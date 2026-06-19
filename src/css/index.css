@@ -1,180 +1,91 @@
-/* ================================
-   FUENTES PERSONALIZADAS
-================================== */
-@font-face {
-  font-family: "Open Sans";
-  src: url('/fonts/OpenSans.ttf');
-}
-
-@font-face {
-  font-family: "Product Sans";
-  src: url('/fonts/ProductSansRegular.ttf');
-}
-
-@font-face {
-  font-family: "Product Sans Italic";
-  src: url('/fonts/ProductSansItalic.ttf');
-}
-
-@font-face {
-  font-family: "Product Sans Italic Bold";
-  src: url('/fonts/ProductSansBoldItalic.ttf');
-}
-
-@font-face {
-  font-family: "Product Sans Bold";
-  src: url('/fonts/ProductSansBold.ttf');
-}
+@font-face { font-family: "Space Grotesk"; src: url('/fonts/SpaceGrotesk-Bold.ttf'); font-weight: 700; }
+@font-face { font-family: "JetBrains Mono"; src: url('/fonts/JetBrainsMono-Medium.ttf'); font-weight: 500; }
 
 :root {
-  /* Colores base */
-  --light: #f6f6f6;
-  --white: #ffffff;
-  --blue: #2F6CA3;
+  --bg-dark: #010910;
+  --grid-color: rgba(47, 108, 163, 0.08);
+  --blue-main: #2F6CA3;
   --blue-dark: #0A365E;
-  --orange: #e3bb9d;
-  --orange-dark: #c1763c;
-  --muted: #6c757d;
-  --text-dark: #212529;
-  --text-light: #ffffff;
-  --bg: #efefef;
-
-  /* Login / Inputs */
-  --login-bg: var(--white);
-  --text-color: var(--text-dark);
-  --input-bg: var(--light);
-  --input-text: var(--text-dark);
-  --input-border: var(--muted);
-  --label-color: var(--muted);
-  --placeholder-color: var(--muted);
-  --input-focus-shadow: rgba(47, 108, 163, 0.25);
-
-  /* Botones */
-  --show-btn-color: var(--blue);
-  --show-btn-hover: var(--blue-dark);
-  --accent-color: var(--blue);
-
-  /* Dropdown / Navbar */
-  --navbar-bg: var(--white);
-  --navbar-dropdown-item-color: var(--text-dark);
-  --divider-color: #dee2e6;
-  --shadow-color: rgba(0, 0, 0, 0.15);
-
-  /* Estados / Extra */
-  --secondary-color: var(--blue-dark);
-  --muted-color: var(--muted);
+  --orange-main: #c1763c;
+  --orange-light: #e3bb9d;
+  --text-main: #eef3f7;
+  --text-muted: #84a2bd;
+  --panel-bg: rgba(10, 54, 94, 0.7);
+  --blue-glow: rgba(33, 79, 119, 0.16);
+  --orange-glow: rgba(193, 118, 60, 0.16);
+  --blue-soft: rgba(47, 108, 163, 0.4);
+  --orange-soft: rgba(193, 118, 60, 0.4);
 }
 
-html,
-body {
-  font-family: "Open Sans", sans-serif;
-  color: var(--text-dark);
-  background-color: var(--bg);
+html, body {
+  font-family: "JetBrains Mono", sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-dark);
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0;
+  margin: 0;
+  min-height: 100vh;
 }
 
-/* Tipografía global */
-div,
-label,
-input,
-p,
-span,
-a,
-button {
-  font-family: "Open Sans", sans-serif;
-  color: var(--text-dark);
+@media (prefers-reduced-motion: no-preference) {
+  body { animation: grid-drift 60s linear infinite; }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Product Sans Bold", sans-serif;
-  color: var(--text-dark);
+@keyframes grid-drift {
+  to { background-position: 40px 40px; }
 }
 
-
-main {
-  color: var(--text-dark);
-  background-color: var(--bg);
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 8% 10%, var(--blue-glow) 0%, transparent 38%),
+    radial-gradient(circle at 92% 90%, var(--orange-glow) 0%, transparent 32%),
+    radial-gradient(circle at center, transparent 30%, var(--bg-dark) 100%);
+  pointer-events: none;
+  z-index: -1;
 }
 
-a {
-    color: var(--blue);
+body::after {
+  content: '';
+  position: fixed;
+  inset: 24px;
+  background-image:
+    linear-gradient(to right, var(--blue-soft) 0, var(--blue-soft) 28px, transparent 28px),
+    linear-gradient(to bottom, var(--blue-soft) 0, var(--blue-soft) 28px, transparent 28px),
+    linear-gradient(to left, var(--orange-soft) 0, var(--orange-soft) 28px, transparent 28px),
+    linear-gradient(to top, var(--orange-soft) 0, var(--orange-soft) 28px, transparent 28px);
+  background-repeat: no-repeat;
+  background-size: 28px 2px, 2px 28px, 28px 2px, 2px 28px;
+  background-position: top left, top left, bottom right, bottom right;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: -1;
 }
 
-a:hover {
-    color: var(--blue-dark);
+@media (max-width: 700px) {
+  body::after { display: none; }
 }
 
-footer {
-    margin-top: 30px;
-    text-align: center;
-    color: var(--muted);
-}
+div, label, input, p, span, a, button { font-family: "JetBrains Mono", sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: "Space Grotesk", sans-serif; color: var(--text-main); }
+main { color: var(--text-main); }
 
-button span {
-    text-decoration: none !important;
-    color: inherit !important;
-}
+a { color: var(--blue-main); text-decoration: none; transition: color 0.2s ease; }
+a:hover { color: var(--orange-light); }
 
-.login-register-btn span {
-    text-decoration: none !important;
-    color: inherit !important;
-}
+footer { margin-top: 30px; text-align: center; color: var(--text-muted); }
 
-.modal-body {
-  background-color: transparent;
-}
+::selection { background: var(--blue-main); color: var(--text-main); }
 
-.modal-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  border: none;
-  background-color: var(--modal-bg);
-}
+:focus-visible { outline: 2px solid var(--orange-light); outline-offset: 3px; border-radius: 2px; }
 
-.themed-input {
-  background-color: var(--input-bg) !important;
-  color: var(--input-text) !important;
-  border: 1px solid var(--input-border) !important;
-  border-radius: 8px;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.9rem;
-  
-}
-
-.themed-input:focus {
-  border-color: var(--accent-color) !important;
-  box-shadow: 0 0 0 0.25rem var(--input-focus-shadow);
-  outline: none;
-}
-
-.themed-input::placeholder {
-  color: var(--placeholder-color) !important;
-}
-
-.hidden {
-  display: none;
-}
-
-.logout {
-  color: rgb(215, 48, 48);
-  transition: all 0.2s;
-}
-
-.logout:hover {
-  color: rgb(162, 26, 26);
-  transition: all 0.2s;
-}
-
-.cursor-pointer {
-  cursor: pointer;
-}
-
-.muted {
-  color: #868686;
-}
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--blue-dark); }
+::-webkit-scrollbar-thumb { background: var(--blue-main); border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: var(--orange-light); }
+html { scrollbar-color: var(--blue-main) var(--blue-dark); }
