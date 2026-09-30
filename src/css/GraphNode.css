@@ -109,6 +109,7 @@
 .graph-node:hover .graph-node__label {
     opacity: 1;
     transform: translateY(0);
+    z-index: 999;
 }
 
 .graph-node--root .graph-node__label {
@@ -138,3 +139,15 @@
     .graph-node--root .graph-node__circle::before,
     .graph-node--root .graph-node__circle::after { animation: none; display: none; }
 }
+
+/* --- estados activo / atenuado --- */
+.graph-node--dim .graph-node__circle { opacity: 0.3; filter: grayscale(0.7); }
+
+.graph-node--active .graph-node__circle {
+    transform: scale(1.2) translateY(-5px);
+    border-color: var(--orange-light);
+    color: var(--orange-light);
+    box-shadow: 0 0 28px rgba(227, 187, 157, 0.35), inset 0 0 12px rgba(193, 118, 60, 0.25);
+}
+
+.graph-node--active .graph-node__label { opacity: 1; transform: translateY(0); z-index: 999; }

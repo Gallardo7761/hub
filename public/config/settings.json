@@ -1,28 +1,107 @@
 {
+    "logo": "https://cdn.miarma.net/files/img/logo-without-text.svg",
     "pages": [
         {
             "title": "Portafolio",
-            "link": "https://jose.miarma.net"
+            "link": "https://jose.miarma.net",
+            "icon": "id-badge",
+            "requiresAuth": false
         },
         {
-            "title": "MiarmaGit",
-            "link": "https://git.miarma.net"
+            "title": "mCDN",
+            "link": "https://cdn.miarma.net",
+            "icon": "network-wired",
+            "requiresAuth": false
         },
         {
-            "title": "MiarmaDocs",
-            "link": "https://docs.miarma.net"
+            "title": "Dineros",
+            "link": "https://dineros.miarma.net",
+            "icon": "wallet",
+            "requiresAuth": true
+        },
+        {
+            "title": "MiarmaPaste",
+            "link": "https://paste.miarma.net",
+            "icon": "paste",
+            "requiresAuth": false
+        },
+        {
+            "title": "Status",
+            "link": "https://status.miarma.net/status/public",
+            "icon": "heart-pulse",
+            "requiresAuth": false
         },
         {
             "title": "MiarmaID",
-            "link": "https://id.miarma.net"
+            "link": "https://id.miarma.net",
+            "icon": "shield-halved",
+            "requiresAuth": false
         },
         {
-            "title": "Huertos Bellavista",
-            "link": "https://www.huertosbellavista.es"
+            "title": "MiarmaGit",
+            "link": "https://git.miarma.net",
+            "icon": "code-branch",
+            "requiresAuth": false
         },
         {
-            "title": "Huertos de Cine",
-            "link": "https://hdc.miarma.net"
+            "title": "MiarmaDocs",
+            "link": "https://docs.miarma.net",
+            "icon": "book",
+            "requiresAuth": false
+        },
+        {
+            "title": "MiarmaDrive",
+            "link": "https://drive.miarma.net",
+            "icon": "hard-drive",
+            "requiresAuth": true
+        },
+        {
+            "title": "MiarmaPhotos",
+            "link": "https://photos.miarma.net",
+            "icon": "images",
+            "requiresAuth": true
+        },
+        {
+            "title": "MiarmaPanel",
+            "link": "https://panel.miarma.net",
+            "icon": "sliders",
+            "requiresAuth": true
+        },
+        {
+            "title": "Jupyter",
+            "link": "https://jupyter.miarma.net",
+            "icon": "square-root-variable",
+            "requiresAuth": true
+        },
+        {
+            "title": "Muelle",
+            "link": "https://muelle.miarma.net",
+            "icon": "docker",
+            "requiresAuth": true
+        },
+        {
+            "title": "MiarmaDash",
+            "link": "https://dash.miarma.net",
+            "icon": "gauge-high",
+            "requiresAuth": true
+        },
+        {
+            "title": "Cine Miarma",
+            "link": "https://cine.miarma.net",
+            "icon": "film",
+            "requiresAuth": true
+        },
+        {
+            "title": "Catálogo",
+            "link": "https://catalogo.miarma.net",
+            "icon": "boxes-stacked",
+            "requiresAuth": true
+        },
+        {
+            "title": "mIArma",
+            "link": "https://ai.miarma.net",
+            "icon": "brain",
+            "requiresAuth": true
         }
-   ]
+    ]
 }

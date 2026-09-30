@@ -43,3 +43,27 @@
 @media (prefers-reduced-motion: reduce) {
     .network-graph__line { animation: none; }
 }
+
+/* --- interactividad --- */
+.network-graph {
+    transition: transform 0.25s ease-out;
+    will-change: transform;
+}
+
+.network-graph__ring {
+    fill: none;
+    stroke: var(--blue-main);
+    stroke-opacity: 0.12;
+    stroke-dasharray: 2 6;
+}
+
+.network-graph__ring--inner { stroke-opacity: 0.08; }
+
+.network-graph__line { transition: stroke 0.25s, stroke-opacity 0.25s, stroke-width 0.25s; }
+
+.network-graph__line.is-active {
+    stroke: var(--orange-light);
+    stroke-opacity: 0.95;
+    stroke-width: 2;
+    filter: drop-shadow(0 0 4px rgba(227, 187, 157, 0.7));
+}
