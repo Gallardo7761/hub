@@ -13,8 +13,8 @@
     gap: 0.25rem;
     min-height: 130px;
     padding: 0.9rem;
-    color: var(--text-main);
-    border: 1.5px solid var(--blue-main);
+    color: var(--miarma-text);
+    border: 1.5px solid var(--miarma-blue);
     border-radius: 10px;
     animation: tile-in 0.35s ease-out both;
     animation-delay: calc(var(--i) * 30ms);
@@ -31,7 +31,7 @@
     top: 0.9rem;
     left: 0.9rem;
     font-size: 1.5rem;
-    color: var(--orange-main);
+    color: var(--miarma-orange);
     transition: color 0.2s ease;
 }
 
@@ -40,13 +40,13 @@
     top: 0.9rem;
     right: 0.9rem;
     font-size: 0.9rem;
-    color: var(--blue-main);
+    color: var(--miarma-blue);
     transform: rotate(-45deg);
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .tile__title {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: var(--miarma-font-display);
     font-size: 1.05rem;
     line-height: 1.15;
 }
@@ -57,20 +57,20 @@
     gap: 0.35rem;
     min-width: 0;
     font-size: 0.7rem;
-    color: var(--text-muted);
+    color: var(--miarma-text-muted);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     transition: color 0.2s ease;
 }
 
-.tile__lock { font-size: 0.6rem; color: var(--orange-main); }
+.tile__lock { font-size: 0.6rem; color: var(--miarma-orange); }
 
 .tile:hover,
 .tile:focus-visible {
-    color: var(--bg-dark);
-    background: var(--orange-main);
-    border-color: var(--orange-main);
+    color: var(--miarma-bg);
+    background: var(--miarma-orange);
+    border-color: var(--miarma-orange);
 }
 
 .tile:hover .tile__icon,
@@ -80,14 +80,14 @@
 .tile:focus-visible .tile__icon,
 .tile:focus-visible .tile__arrow,
 .tile:focus-visible .tile__sub,
-.tile:focus-visible .tile__lock { color: var(--bg-dark); }
+.tile:focus-visible .tile__lock { color: var(--miarma-bg); }
 
 .tile:hover .tile__arrow,
 .tile:focus-visible .tile__arrow { transform: rotate(-45deg) translateX(3px); }
 
 /* pieza para identificarse */
-.tile--login { border-color: var(--blue-dark); }
-.tile--login .tile__icon { color: var(--blue-main); }
+.tile--login { border-color: var(--miarma-blue-dark); }
+.tile--login .tile__icon { color: var(--miarma-blue); }
 
 @media (max-width: 480px) {
     .mosaic { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }

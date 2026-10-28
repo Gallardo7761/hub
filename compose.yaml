@@ -1,0 +1,19 @@
+name: hub
+
+services:
+  web:
+    build:
+      context: .
+    image: git.miarma.net/gallardo7761/hub-web:${WEB_VERSION:-latest}
+    container_name: hub-web
+    restart: unless-stopped
+    networks:
+      - proxy_net
+    logging:
+      options:
+        max-size: 10m
+        max-file: "3"
+
+networks:
+  proxy_net:
+    external: true
