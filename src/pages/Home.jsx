@@ -16,25 +16,23 @@ const Home = () => {
         [pages, authenticated]
     );
 
-    if (configLoading || authLoading) return <LoadingIcon />;
+    const loading = configLoading || authLoading;
 
     return (
-        <main className="home">
-            <header className="home__header">
-                <a className="home__brand" href="https://www.miarma.net">
-                    <img src={config.logo} alt="" width={40} height={40} />
-                    <span>
-                        <h1 className="home__title">
-                            miarma<span className="accent">.</span>net
-                        </h1>
-                        <span className="home__tag">er çentro · {visible.length} servicios</span>
-                    </span>
-                </a>
-                <UserBadge />
-            </header>
+        <>
+            <miarma-header
+                href="https://www.miarma.net"
+                tag={loading ? "er çentro" : `er çentro · ${visible.length} servicios`}
+            >
+                {!loading && <UserBadge />}
+            </miarma-header>
 
-            <Mosaic pages={visible} hiddenCount={pages.length - visible.length} />
-        </main>
+            <main className="home miarma-container">
+                {loading
+                    ? <LoadingIcon />
+                    : <Mosaic pages={visible} hiddenCount={pages.length - visible.length} />}
+            </main>
+        </>
     );
 };
 

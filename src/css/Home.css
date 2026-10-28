@@ -1,51 +1,6 @@
 .home {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: clamp(1.5rem, 4vh, 2.5rem);
-    padding: clamp(1.5rem, 5vh, 3rem) 16px;
-}
-
-.home__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    width: min(1000px, 100%);
-}
-
-.home__brand {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.8rem;
-    color: var(--miarma-text);
-}
-
-.home__brand:hover { color: var(--miarma-text); }
-
-.home__brand img {
-    padding: 6px;
-    background: var(--miarma-text);
-    border-radius: 10px;
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.home__brand:hover img { transform: rotate(-10deg); }
-
-.home__title {
-    margin: 0;
-    font-size: clamp(1.6rem, 4vw, 2.2rem);
-    line-height: 1;
-    letter-spacing: -0.01em;
-}
-
-.home__title .accent { color: var(--miarma-orange); }
-
-.home__tag {
-    display: block;
-    margin-top: 0.3rem;
-    font-size: 0.72rem;
-    color: var(--miarma-text-muted);
+    padding-bottom: clamp(1.5rem, 5vh, 3rem);
 }

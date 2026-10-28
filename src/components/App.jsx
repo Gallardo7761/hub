@@ -4,7 +4,7 @@ import Home from "@/pages/Home.jsx";
 
 const App = () => {
     return (
-        <div className='d-flex flex-column min-vh-100'>
+        <div className='miarma-shell'>
             <Home />
             <miarma-footer />
         </div>
