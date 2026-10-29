@@ -20,14 +20,14 @@ const Home = () => {
 
     return (
         <>
-            <miarma-header
-                href="https://www.miarma.net"
+            <kb-header
+                href="https://www.killobyte.es"
                 tag={loading ? "er çentro" : `er çentro · ${visible.length} servicios`}
             >
                 {!loading && <UserBadge />}
-            </miarma-header>
+            </kb-header>
 
-            <main className="home miarma-container">
+            <main className="home kb-container">
                 {loading
                     ? <LoadingIcon />
                     : <Mosaic pages={visible} hiddenCount={pages.length - visible.length} />}

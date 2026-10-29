@@ -4,7 +4,7 @@ import Tile from "@/components/mosaic/Tile";
 import { iconFor } from "@/components/icons";
 import "@/css/Mosaic.css";
 
-const LOGIN = "https://id.miarma.net";
+const LOGIN = "https://id.killobyte.es";
 
 const hostOf = (link) => {
     try { return new URL(link).hostname; } catch { return link; }

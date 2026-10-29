@@ -4,9 +4,9 @@ import Home from "@/pages/Home.jsx";
 
 const App = () => {
     return (
-        <div className='miarma-shell'>
+        <div className='kb-shell'>
             <Home />
-            <miarma-footer />
+            <kb-footer />
         </div>
     );
 }

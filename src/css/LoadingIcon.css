@@ -5,12 +5,12 @@
     gap: 6px;
     min-height: 40vh;
     font-family: "JetBrains Mono", monospace;
-    color: var(--miarma-text-muted);
+    color: var(--kb-text-muted);
     font-size: 0.95rem;
 }
 
 .boot-loader__prompt {
-    color: var(--miarma-blue);
+    color: var(--kb-blue);
 }
 
 .boot-loader__dots span {
@@ -32,7 +32,7 @@
     display: inline-block;
     width: 7px;
     height: 14px;
-    background: var(--miarma-orange-light);
+    background: var(--kb-orange-light);
     animation: boot-blink 1s step-end infinite;
 }
 

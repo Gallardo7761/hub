@@ -1,106 +1,100 @@
 {
-    "logo": "https://cdn.miarma.net/files/img/logo-without-text.svg",
+    "logo": "https://cdn.killobyte.es/files/img/logo-without-text.svg",
     "pages": [
         {
             "title": "Portafolio",
-            "link": "https://jose.miarma.net",
+            "link": "https://jose.killobyte.es",
             "icon": "id-badge",
             "requiresAuth": false
         },
         {
-            "title": "mCDN",
-            "link": "https://cdn.miarma.net",
+            "title": "CDN",
+            "link": "https://cdn.killobyte.es",
             "icon": "network-wired",
             "requiresAuth": false
         },
         {
             "title": "Dineros",
-            "link": "https://dineros.miarma.net",
+            "link": "https://dineros.killobyte.es",
             "icon": "wallet",
             "requiresAuth": true
         },
         {
-            "title": "MiarmaPaste",
-            "link": "https://paste.miarma.net",
+            "title": "KPaste",
+            "link": "https://paste.killobyte.es",
             "icon": "paste",
             "requiresAuth": false
         },
         {
             "title": "Status",
-            "link": "https://status.miarma.net/status/public",
+            "link": "https://status.killobyte.es/status/public",
             "icon": "heart-pulse",
             "requiresAuth": false
         },
         {
-            "title": "MiarmaID",
-            "link": "https://id.miarma.net",
+            "title": "KilloID",
+            "link": "https://id.killobyte.es",
             "icon": "shield-halved",
             "requiresAuth": false
         },
         {
-            "title": "MiarmaGit",
-            "link": "https://git.miarma.net",
+            "title": "Fragua",
+            "link": "https://git.killobyte.es",
             "icon": "code-branch",
             "requiresAuth": false
         },
         {
-            "title": "MiarmaDocs",
-            "link": "https://docs.miarma.net",
+            "title": "Apuntes",
+            "link": "https://docs.killobyte.es",
             "icon": "book",
             "requiresAuth": false
         },
         {
-            "title": "MiarmaDrive",
-            "link": "https://drive.miarma.net",
+            "title": "Nube",
+            "link": "https://drive.killobyte.es",
             "icon": "hard-drive",
             "requiresAuth": true
         },
         {
-            "title": "MiarmaPhotos",
-            "link": "https://photos.miarma.net",
+            "title": "Galería",
+            "link": "https://photos.killobyte.es",
             "icon": "images",
             "requiresAuth": true
         },
         {
-            "title": "MiarmaPanel",
-            "link": "https://panel.miarma.net",
+            "title": "Panel",
+            "link": "https://panel.killobyte.es",
             "icon": "sliders",
             "requiresAuth": true
         },
         {
             "title": "Jupyter",
-            "link": "https://jupyter.miarma.net",
+            "link": "https://jupyter.killobyte.es",
             "icon": "square-root-variable",
             "requiresAuth": true
         },
         {
             "title": "Muelle",
-            "link": "https://muelle.miarma.net",
+            "link": "https://muelle.killobyte.es",
             "icon": "docker",
             "requiresAuth": true
         },
         {
-            "title": "MiarmaDash",
-            "link": "https://dash.miarma.net",
+            "title": "Dashboard",
+            "link": "https://dash.killobyte.es",
             "icon": "gauge-high",
             "requiresAuth": true
         },
         {
-            "title": "Cine Miarma",
-            "link": "https://cine.miarma.net",
+            "title": "Notflix",
+            "link": "https://cine.killobyte.es",
             "icon": "film",
             "requiresAuth": true
         },
         {
             "title": "Catálogo",
-            "link": "https://catalogo.miarma.net",
+            "link": "https://catalogo.killobyte.es",
             "icon": "boxes-stacked",
-            "requiresAuth": true
-        },
-        {
-            "title": "mIArma",
-            "link": "https://ai.miarma.net",
-            "icon": "brain",
             "requiresAuth": true
         }
     ]

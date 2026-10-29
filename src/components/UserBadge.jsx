@@ -9,7 +9,7 @@ const UserBadge = () => {
     return (
         <a
             className="user-badge"
-            href="https://id.miarma.net"
+            href="https://id.killobyte.es"
             target="_blank"
             rel="noopener noreferrer"
             title={groups.length ? `grupos: ${groups.join(", ")}` : "sesión activa"}
