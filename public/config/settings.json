@@ -1,5 +1,5 @@
 {
-    "logo": "https://cdn.killobyte.es/files/img/logo-without-text.svg",
+    "logo": "https://cdn.killobyte.es/files/theme/v3/img/marca-clara.svg",
     "pages": [
         {
             "title": "Portafolio",
@@ -96,6 +96,24 @@
             "link": "https://catalogo.killobyte.es",
             "icon": "boxes-stacked",
             "requiresAuth": true
+        },
+        {
+            "title": "Biblioteca",
+            "link": "https://books.killobyte.es",
+            "icon": "book-open-reader",
+            "requiresAuth": true
+        },
+        {
+            "title": "Chivato",
+            "link": "https://chivato.killobyte.es",
+            "icon": "mobile-vibrate",
+            "requiresAuth": false
+        },
+        {
+            "title": "SES Alas de la Libertad",
+            "link": "https://ses.killobyte.es",
+            "icon": "earth-europe",
+            "requiresAuth": false
         }
     ]
 }

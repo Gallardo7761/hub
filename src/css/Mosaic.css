@@ -14,7 +14,7 @@
     min-height: 130px;
     padding: 0.9rem;
     color: var(--kb-text);
-    border: 1.5px solid var(--kb-blue);
+    border: 1.5px solid var(--kb-green);
     border-radius: 10px;
     animation: tile-in 0.35s ease-out both;
     animation-delay: calc(var(--i) * 30ms);
@@ -40,7 +40,7 @@
     top: 0.9rem;
     right: 0.9rem;
     font-size: 0.9rem;
-    color: var(--kb-blue);
+    color: var(--kb-green);
     transform: rotate(-45deg);
     transition: color 0.2s ease, transform 0.2s ease;
 }
@@ -86,8 +86,8 @@
 .tile:focus-visible .tile__arrow { transform: rotate(-45deg) translateX(3px); }
 
 /* pieza para identificarse */
-.tile--login { border-color: var(--kb-blue-dark); }
-.tile--login .tile__icon { color: var(--kb-blue); }
+.tile--login { border-color: var(--kb-green-dark); }
+.tile--login .tile__icon { color: var(--kb-green); }
 
 @media (max-width: 480px) {
     .mosaic { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }

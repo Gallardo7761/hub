@@ -10,7 +10,7 @@
 }
 
 .boot-loader__prompt {
-    color: var(--kb-blue);
+    color: var(--kb-green);
 }
 
 .boot-loader__dots span {

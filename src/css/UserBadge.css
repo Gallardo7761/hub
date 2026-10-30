@@ -5,7 +5,7 @@
     padding: 0.4rem 0.8rem;
     font-size: 0.8rem;
     color: var(--kb-orange-light);
-    border: 2px solid var(--kb-blue-dark);
+    border: 2px solid var(--kb-green-dark);
     border-radius: 8px;
     transition: color 0.2s ease, border-color 0.2s ease;
 }
