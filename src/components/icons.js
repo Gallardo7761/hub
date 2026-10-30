@@ -16,8 +16,12 @@ import {
     faBoxesStacked,
     faBrain,
     faGlobe,
+    faBookOpenReader,
+    faBullhorn,
+    faEarthEurope,
 } from "@fortawesome/free-solid-svg-icons";
 import { faDocker } from "@fortawesome/free-brands-svg-icons";
+import { faMobile } from "@fortawesome/free-solid-svg-icons/faMobile";
 
 const ICON_MAP = {
     "id-badge": faIdBadge,
@@ -37,6 +41,9 @@ const ICON_MAP = {
     "film": faFilm,
     "boxes-stacked": faBoxesStacked,
     "brain": faBrain,
+    "book-open-reader": faBookOpenReader,
+    "bullhorn": faBullhorn,
+    "earth-europe": faEarthEurope
 };
 
 export const iconFor = (name) => ICON_MAP[name] || faGlobe;

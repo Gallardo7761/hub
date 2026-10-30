@@ -106,11 +106,11 @@
         {
             "title": "Chivato",
             "link": "https://chivato.killobyte.es",
-            "icon": "mobile-vibrate",
+            "icon": "bullhorn",
             "requiresAuth": false
         },
         {
-            "title": "SES Alas de la Libertad",
+            "title": "Terminal ciudadana",
             "link": "https://ses.killobyte.es",
             "icon": "earth-europe",
             "requiresAuth": false
