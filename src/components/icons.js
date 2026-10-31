@@ -9,16 +9,14 @@ import {
     faBook,
     faHardDrive,
     faImages,
-    faSliders,
-    faSquareRootVariable,
-    faGaugeHigh,
     faFilm,
     faBoxesStacked,
-    faBrain,
     faGlobe,
     faBookOpenReader,
     faBullhorn,
     faEarthEurope,
+    faGamepad,
+    faMessage,
 } from "@fortawesome/free-solid-svg-icons";
 import { faDocker } from "@fortawesome/free-brands-svg-icons";
 import { faMobile } from "@fortawesome/free-solid-svg-icons/faMobile";
@@ -34,16 +32,14 @@ const ICON_MAP = {
     "book": faBook,
     "hard-drive": faHardDrive,
     "images": faImages,
-    "sliders": faSliders,
-    "square-root-variable": faSquareRootVariable,
+    "panel": faGamepad,
     "docker": faDocker,
-    "gauge-high": faGaugeHigh,
     "film": faFilm,
     "boxes-stacked": faBoxesStacked,
-    "brain": faBrain,
     "book-open-reader": faBookOpenReader,
     "bullhorn": faBullhorn,
-    "earth-europe": faEarthEurope
+    "earth-europe": faEarthEurope,
+    "chat": faMessage
 };
 
 export const iconFor = (name) => ICON_MAP[name] || faGlobe;

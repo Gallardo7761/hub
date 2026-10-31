@@ -8,33 +8,21 @@
             "requiresAuth": false
         },
         {
-            "title": "CDN",
-            "link": "https://cdn.killobyte.es",
-            "icon": "network-wired",
+            "title": "KID",
+            "link": "https://id.killobyte.es",
+            "icon": "shield-halved",
             "requiresAuth": false
         },
         {
-            "title": "Dineros",
-            "link": "https://dineros.killobyte.es",
-            "icon": "wallet",
-            "requiresAuth": true
-        },
-        {
-            "title": "KPaste",
-            "link": "https://paste.killobyte.es",
+            "title": "Caduco",
+            "link": "https://caduco.killobyte.es",
             "icon": "paste",
             "requiresAuth": false
         },
         {
-            "title": "Status",
-            "link": "https://status.killobyte.es/status/public",
-            "icon": "heart-pulse",
-            "requiresAuth": false
-        },
-        {
-            "title": "KilloID",
-            "link": "https://id.killobyte.es",
-            "icon": "shield-halved",
+            "title": "CDN",
+            "link": "https://cdn.killobyte.es",
+            "icon": "network-wired",
             "requiresAuth": false
         },
         {
@@ -50,51 +38,9 @@
             "requiresAuth": false
         },
         {
-            "title": "Nube",
-            "link": "https://drive.killobyte.es",
-            "icon": "hard-drive",
-            "requiresAuth": true
-        },
-        {
-            "title": "Galería",
-            "link": "https://photos.killobyte.es",
-            "icon": "images",
-            "requiresAuth": true
-        },
-        {
-            "title": "Panel",
-            "link": "https://panel.killobyte.es",
-            "icon": "sliders",
-            "requiresAuth": true
-        },
-        {
-            "title": "Jupyter",
-            "link": "https://jupyter.killobyte.es",
-            "icon": "square-root-variable",
-            "requiresAuth": true
-        },
-        {
-            "title": "Muelle",
-            "link": "https://muelle.killobyte.es",
-            "icon": "docker",
-            "requiresAuth": true
-        },
-        {
-            "title": "Dashboard",
-            "link": "https://dash.killobyte.es",
-            "icon": "gauge-high",
-            "requiresAuth": true
-        },
-        {
-            "title": "Notflix",
-            "link": "https://cine.killobyte.es",
-            "icon": "film",
-            "requiresAuth": true
-        },
-        {
-            "title": "Catálogo",
-            "link": "https://catalogo.killobyte.es",
-            "icon": "boxes-stacked",
+            "title": "Chat",
+            "link": "https://chat.killobyte.es",
+            "icon": "chat",
             "requiresAuth": true
         },
         {
@@ -104,12 +50,60 @@
             "requiresAuth": true
         },
         {
+            "title": "Catálogo",
+            "link": "https://catalogo.killobyte.es",
+            "icon": "boxes-stacked",
+            "requiresAuth": true
+        },
+        {
+            "title": "Notflix",
+            "link": "https://cine.killobyte.es",
+            "icon": "film",
+            "requiresAuth": true
+        },
+        {
+            "title": "Galería",
+            "link": "https://photos.killobyte.es",
+            "icon": "images",
+            "requiresAuth": true
+        },
+        {
+            "title": "Nube",
+            "link": "https://drive.killobyte.es",
+            "icon": "hard-drive",
+            "requiresAuth": true
+        },
+        {
+            "title": "Dineros",
+            "link": "https://dineros.killobyte.es",
+            "icon": "wallet",
+            "requiresAuth": true
+        },
+        {
+            "title": "Status",
+            "link": "https://status.killobyte.es/status/public",
+            "icon": "heart-pulse",
+            "requiresAuth": false
+        },
+        {
             "title": "Chivato",
             "link": "https://chivato.killobyte.es",
             "icon": "bullhorn",
             "requiresAuth": false
         },
         {
+            "title": "Muelle",
+            "link": "https://muelle.killobyte.es",
+            "icon": "docker",
+            "requiresAuth": true
+        },
+        {
+            "title": "Panel",
+            "link": "https://panel.killobyte.es",
+            "icon": "panel",
+            "requiresAuth": true
+        },
+                {
             "title": "Terminal ciudadana",
             "link": "https://ses.killobyte.es",
             "icon": "earth-europe",
