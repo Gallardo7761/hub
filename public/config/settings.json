@@ -38,12 +38,6 @@
             "requiresAuth": false
         },
         {
-            "title": "Chat",
-            "link": "https://chat.killobyte.es",
-            "icon": "chat",
-            "requiresAuth": true
-        },
-        {
             "title": "Biblioteca",
             "link": "https://books.killobyte.es",
             "icon": "book-open-reader",
