@@ -11,8 +11,8 @@ export const ConfigProvider = ({ children }) => {
   useEffect(() => {
     const fetchConfig = async () => {
       try {
-        const response = await fetch("/config/settings.json");
-        if (!response.ok) throw new Error("Error al cargar settings.*.json");
+        const response = await fetch("https://cdn.killobyte.es/files/config/hub.json", { cache: "no-cache" });
+        if (!response.ok) throw new Error("Error al cargar la configuración del hub");
         const json = await response.json();
         setConfig(json);
       } catch (err) {
