@@ -1,22 +1,18 @@
 import { useAuth } from "@/hooks/useAuth";
-import "@/css/UserBadge.css";
+
+const LOGIN = "https://id.killobyte.es";
 
 const UserBadge = () => {
     const { authenticated, user, groups } = useAuth();
 
-    if (!authenticated || !user) return null;
+    if (!authenticated || !user) {
+        return <a className="session" href={LOGIN}>identificarse</a>;
+    }
 
     return (
-        <a
-            className="user-badge"
-            href="https://id.killobyte.es"
-            target="_blank"
-            rel="noopener noreferrer"
-            title={groups.length ? `grupos: ${groups.join(", ")}` : "sesión activa"}
-        >
-            <span className="user-badge__dot" aria-hidden="true"></span>
-            <span className="user-badge__name">@{user}</span>
-        </a>
+        <span className="session" title={groups.length ? `grupos: ${groups.join(", ")}` : undefined}>
+            sesión: <a href={LOGIN} target="_blank" rel="noopener noreferrer">@{user}</a>
+        </span>
     );
 };
 

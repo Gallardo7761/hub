@@ -1,6 +1,0 @@
-.home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-bottom: clamp(1.5rem, 5vh, 3rem);
-}

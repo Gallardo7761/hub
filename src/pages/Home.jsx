@@ -1,13 +1,11 @@
 import { useMemo } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { useConfig } from "@/hooks/useConfig";
-import LoadingIcon from "@/components/LoadingIcon";
 import UserBadge from "@/components/UserBadge";
-import Mosaic from "@/components/mosaic/Mosaic";
-import "@/css/Home.css";
+import Services from "@/components/Services";
 
 const Home = () => {
-    const { config, configLoading } = useConfig();
+    const { config, configLoading, configError } = useConfig();
     const { authenticated, authLoading } = useAuth();
 
     const pages = useMemo(() => config?.pages ?? [], [config]);
@@ -27,10 +25,18 @@ const Home = () => {
                 {!loading && <UserBadge />}
             </kb-header>
 
-            <main className="home kb-container">
-                {loading
-                    ? <LoadingIcon />
-                    : <Mosaic pages={visible} hiddenCount={pages.length - visible.length} />}
+            <main className="kb-container">
+                <h1>er çentro</h1>
+                <p>
+                    Índice de los servicios que corren en el servidor de killobyte.es.
+                    Los marcados como <i>privados</i> necesitan sesión en KID.
+                </p>
+
+                {loading && <p className="kb-muted">Cargando…</p>}
+                {!loading && configError && <p>No se ha podido leer la configuración del hub. Recarga en un rato.</p>}
+                {!loading && !configError && (
+                    <Services pages={visible} hiddenCount={pages.length - visible.length} />
+                )}
             </main>
         </>
     );
